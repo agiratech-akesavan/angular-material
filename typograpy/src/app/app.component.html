@@ -1,0 +1,97 @@
+<router-outlet></router-outlet>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Second Line</span>
+    <!-- <span class="example-spacer"></span> -->
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container >
+  <mat-sidenav #sidenav mode="side">Start</mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-raised-button (click)="sidenav.toggle()">manuBar</button>
+
+<h1>TypoGrapy</h1>
+<!-- <div>
+  <div class="mat-display-4">Hello</div>
+  <div class="mat-display-3">Hello</div>
+  <div class="mat-display-2">Hello</div>
+  <div class="mat-display-1">Hello</div>
+  <div class="mat-title">Hello</div>
+  <div class="mat-subheading-2">Hello</div>
+  <div class="mat-subheading-1">Hello</div>
+</div> -->
+
+<h1>Button</h1>
+
+<button color="accent" mat-button>click me!</button>
+<button color="primary" mat-raised-button>click me!</button>
+<button color="warn" mat-flat-button disableRipple>click me!</button>
+<button mat-stroked-button >click me!</button>
+
+<h1>Button Circle</h1>
+
+<button mat-icon-button>click</button>
+<button mat-fab>click</button>
+<button mat-mini-fab>click</button>
+
+
+<h1>Beage</h1>
+
+<span [matBadge]="notification"  matBadgeOverlap="true">Notification</span>
+<mat-icon  [matBadge]="notification" matBadgeSize="medium" matBadgeColor="warn" style="margin-left:200px">home</mat-icon>
+<div style="display: block;">
+  <button mat-raised-button (click)="add()">Notification add</button>
+</div>
+<h1>Button Toggle</h1>
+
+<div>
+  <mat-button-toggle #toggleBtn checked >Input</mat-button-toggle>
+  <p>{{toggleBtn.value}}</p>
+</div>
+
+<div>
+  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
+    <mat-button-toggle value="Frondend">Frondend</mat-button-toggle>
+    <mat-button-toggle value="Backend">BackEnd</mat-button-toggle>
+    <mat-button-toggle value="FullStack">FullStack</mat-button-toggle>
+  </mat-button-toggle-group>
+  <h3>
+    {{toggleGroup.value}}
+  </h3>
+    
+</div>
+
+
+<h1>Spinner</h1>
+
+<mat-progress-spinner value="80"></mat-progress-spinner>
+<mat-spinner *ngIf="showIt"></mat-spinner>
+<button (click)="load()">Load</button>
+</mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <h1>gird</h1>
+
+<mat-grid-list cols="4">
+  <mat-grid-tile
+  *ngFor="let tile of tiles"
+  [colspan]="tile.cols"
+  [rowspan]="tile.rows"
+  [style.background]="tile.color">
+{{tile.text}}
+</mat-grid-tile>
+</mat-grid-list> -->
+
+<h1>Tabs</h1>
+
+<mat-tab-group #tabRaf  mat-align-tabs="center">
+  <mat-tab label="title1">Title1</mat-tab>
+  <mat-tab label="title2">Title2</mat-tab>
+  <mat-tab label="title3">Title3</mat-tab>
+</mat-tab-group>
+{{tabRaf.selectedIndex}}
+
+
+

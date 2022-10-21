@@ -1,0 +1,28 @@
+[{
+    "year":1995,
+    "amount":5000,
+    "color":"yellow"
+},{
+    "year":2000,
+    "amount":8000,
+    "color":"rgba(48, 82, 47,1)"
+
+},
+{
+    "year":2005,
+    "amount":3000,
+    "color":"red"
+},{
+    "year":2010,
+    "amount":8000,
+    "color":"green"
+},{
+    "year":2015,
+    "amount":10000,
+    "color":"rgba(149, 169, 186,1)"
+},{
+    "year":2020,
+    "amount":12000,
+    "color":"rgba(129, 94, 145,1)"
+}
+]
