@@ -1,0 +1,33 @@
+.container{
+    .heading{
+        text-align: center;
+        color: black;
+    }
+    .search-form-field{
+        width:250px;
+        line-height: 1rem;
+        margin:1rem 0rem;
+        
+        // padding:1rem 0rem;
+    }
+    .demo-table {
+        width: 100%; 
+        tr:nth-child(even){
+            background-color: rgba(146, 146, 146, 0.37);
+            td{
+                color:black
+            }
+        }
+        tr:nth-child(odd){
+            background-color: white;
+        }
+        tr:hover{
+            background-color: #ddd;
+        }
+            th{
+                font-size: 1.3rem;
+                color:black;
+                background-color:rgba(187, 134, 21, 0.76);
+            }
+        }  
+}

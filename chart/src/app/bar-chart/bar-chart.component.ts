@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart,registerables } from "node_modules/chart.js"
 import { ServiceChartService } from '../service/service-chart.service';
-import { map } from 'rxjs/operators';
+// import { map } from 'rxjs/operators';
 
 
 Chart.register(...registerables);

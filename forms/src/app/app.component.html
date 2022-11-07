@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <h1>Forms</h1>
+    </div>
+  </div>
+  <form class="example-form mt-3">
+  <div class="row">
+    <div class="col-3">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input type="text" matInput>
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field>
+          <mat-label>Topic</mat-label>
+          <mat-select [(value)]="input">
+            <mat-option>None</mat-option>
+            <mat-option value="angular">Angular</mat-option>
+            <mat-option value="react">React</mat-option>
+            <mat-option value="vue">vue</mat-option>
+          </mat-select>
+        </mat-form-field>
+        {{input}}
+      </div>
+      <div class="col-3">
+        <mat-form-field>
+          <mat-label>person</mat-label>
+          <input type="text" placeHolder="choose one person" matInput   [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions |async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      </div>
+  </form>
+</div>
+<router-outlet></router-outlet>
